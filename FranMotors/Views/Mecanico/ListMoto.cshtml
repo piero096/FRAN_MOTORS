@@ -1,0 +1,20 @@
+﻿@{ 
+    var cliente = (Cliente)ViewBag.Cliente;
+}
+
+
+<h1>MOTOCICLETAS</h1>
+@foreach (var item in Model)
+{
+    <ul>
+        <li>@item.Placa</li>
+        <li>@item.Marca</li>
+        <li>@item.NumSerie</li>
+        <li>@item.Cilindrada</li>
+        <li>@item.Año</li>
+        <li>@item.EstadoMoto</li>
+        <li><a href="/mecanico/editmoto?id=@item.Id&idcliente=@cliente.Id">Editar Estado</a></li>
+        <li><a href="/mecanico/reghistory?id=@item.Id&idcliente=@cliente.Id">Agregar Historia</a></li>
+        <li><a href="/mecanico/verhistoria?id=@item.Id&idcliente=@item.IdCliente">Mostrar Historia</a></li>
+    </ul>
+}

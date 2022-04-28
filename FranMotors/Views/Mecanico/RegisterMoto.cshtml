@@ -1,0 +1,43 @@
+﻿@{ 
+    var cliente = (Cliente)Model;
+}
+
+<div class="container">
+    <div class="formmulario">
+        <h3>Registrar Motocileta</h3>
+        <form action="/mecanico/registermoto?id=@cliente.Id" method="post">
+            <div class="mt-2 mb-2">
+                <input class="form-control" type="text" name="Placa" placeholder="Ingrese Placa" />
+            </div>
+            <span class="text-danger">@Html.ValidationMessage("Placa")</span>
+            <div class="mt-2 mb-2">
+                <input class="form-control" type="text" name="Marca" placeholder="Ingrese Marca" />
+            </div>
+            <span class="text-danger">@Html.ValidationMessage("Marca")</span>
+            <div class="mt-2 mb-2">
+                <input class="form-control" type="text" name="NumSerie" placeholder="Ingrese NumSerie" />
+            </div>
+            <span class="text-danger">@Html.ValidationMessage("NumSerie")</span>
+            <div class="mt-2 mb-2">
+                <input class="form-control" type="text" name="Cilindrada" placeholder="Ingrese Cilindrada" />
+            </div>
+            <span class="text-danger">@Html.ValidationMessage("Cilindrada")</span>
+            <div class="mt-2 mb-2">
+                <input class="form-control" type="date" name="Año" placeholder="Ingrese Año" />
+            </div>
+            <span class="text-danger">@Html.ValidationMessage("Año")</span>
+            <div>
+                <select class="form-control" name="EstadoMoto">
+                    <option value="En Ingreso">En Ingreso</option>
+                    <option value="En Reparación">En Reparación</option>
+                    <option value="En Mantenimiento">En Mantenimiento</option>
+                    <option value="Para Entrega">Para Entrega</option>
+                </select>
+            </div>
+            <div class="mt-2">
+                <button class="btn btn-primary">Registrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+

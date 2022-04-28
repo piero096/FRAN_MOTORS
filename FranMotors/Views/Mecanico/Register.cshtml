@@ -1,0 +1,32 @@
+﻿
+<link rel="stylesheet" href="~/css/RegisterCliente.css" />
+<div class="container">        
+    <form action="/mecanico/register" method="post">        
+        <div class="">
+            <h3>Registrar Cliente</h3>
+            <div class="mt-2 mb-2">
+                <span class="text-danger">@Html.ValidationMessage("Nombre")</span>
+                <input class="form-control" type="text" name="Nombre" placeholder="Ingrese Nombre" />
+            </div>
+            <div class="mt-2 mb-2">
+                <span class="text-danger">@Html.ValidationMessage("Apellido")</span>
+                <input class="form-control" type="text" name="Apellido" placeholder="Ingrese Apellido" />
+            </div>
+            <div class="mt-2 mb-2">
+                <span class="text-danger">@Html.ValidationMessage("Dni")</span>
+                <input class="form-control" type="text" name="Dni" placeholder="Ingrese DNI" />
+            </div>
+            <div class="mt-2 mb-2">
+                <span class="text-danger">@Html.ValidationMessage("Correo")</span>
+                <input class="form-control" type="text" name="Correo" placeholder="Ingrese Correo" />
+            </div>
+            <div class="mt-2 mb-2">
+                <span class="text-danger">@Html.ValidationMessage("Telefono")</span>
+                <input class="form-control" type="text" name="Telefono" placeholder="Ingrese Teléfono" />
+            </div>
+        </div>
+        <div class="mt-2 mb-2">
+            <button class="btn btn-primary form-control-sm">Registrar</button>
+        </div>
+    </form>    
+</div>

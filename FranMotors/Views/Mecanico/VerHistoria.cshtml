@@ -1,0 +1,20 @@
+﻿@{
+    var moto = (Motocicleta)ViewBag.moto;
+}
+
+
+<div class="container">
+    <a href="/mecanico/listmoto?id=@moto.IdCliente">Regresar</a>
+</div>
+
+@foreach (var item in Model)
+{
+    <ul>
+        <li>@item.Fecha</li>
+        <li>@item.Detalle</li>
+    </ul>
+}
+
+<div class="container">
+    <a href="/mecanico/listmoto?id=@moto.IdCliente">Regresar</a>
+</div>
